@@ -6,10 +6,8 @@ import CartPage from "./pages/CartPage";
 function App() {
   return (
     <Switch>
-      <div className="App">
-        <Route path={"/cart"} component={CartPage} />
-        <Route exact path={"/"} component={HomePage} />
-      </div>
+      <Route path={"/cart"} component={CartPage} />
+      <Route exact path={"/"} component={HomePage} />
     </Switch>
   );
 }

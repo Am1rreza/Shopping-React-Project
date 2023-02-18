@@ -71,3 +71,9 @@ a.activeLink,
     width: 100%;
   }
 }
+
+@media screen and (min-width: 1300px) {
+  .mainNavigation nav {
+    padding: 0;
+  }
+}

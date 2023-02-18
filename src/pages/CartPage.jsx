@@ -29,12 +29,14 @@ const CartPage = () => {
             {cart.map((item) => {
               return (
                 <div className="cartItem" key={item.id}>
-                  <div className="itemImg">
-                    <img src={item.image} alt={item.name} />
+                  <div className="cartDetailSection">
+                    <div className="itemImg">
+                      <img src={item.image} alt={item.name} />
+                    </div>
+                    <div>{item.name}</div>
+                    <div>{item.price * item.quantity}$</div>
                   </div>
-                  <div>{item.name}</div>
-                  <div>{item.price * item.quantity}$</div>
-                  <div>
+                  <div className="cartButtonSection">
                     <button>Add</button>
                     <button>{item.quantity}</button>
                     <button>Remove</button>

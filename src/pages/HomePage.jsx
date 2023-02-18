@@ -2,6 +2,11 @@ import Layout from "../Layout/Layout";
 import * as data from "../data";
 
 const HomePage = () => {
+  // Handlers
+  const addProductHandler = (product) => {
+    console.log(product);
+  };
+
   return (
     <Layout>
       <main className="container">
@@ -13,8 +18,13 @@ const HomePage = () => {
                   <img src={product.image} alt={product.name} />
                 </div>
                 <div className="productDescription">
-                  <p>{product.name}</p>
-                  <p>{product.price}$</p>
+                  <div>
+                    <p>{product.name}</p>
+                    <p>{product.price}$</p>
+                  </div>
+                  <button className="btn primaryBtn" onClick={() => addProductHandler(product)}>
+                    Add to Cart
+                  </button>
                 </div>
               </section>
             );

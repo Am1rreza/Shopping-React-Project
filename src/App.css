@@ -56,13 +56,18 @@
 .btn {
   border: none;
   outline: none;
-  padding: 5px 8px;
+  padding: 10px 15px;
   cursor: pointer;
   border-radius: 4px;
-  height: 2rem;
+  text-align: center;
 }
 
 .primaryBtn {
   background-color: #3aafa9;
+  color: #17252a;
+}
+
+.secondaryBtn {
+  background-color: #b0e9e6;
   color: #17252a;
 }

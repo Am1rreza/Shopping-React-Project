@@ -5,7 +5,7 @@
   border: 2px solid #3aafa9;
   border-radius: 5px;
   margin: 0 auto;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   max-width: 1170px;
 }
 
@@ -40,12 +40,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #17252a;
+}
+
+.cartItemList {
+  flex: 1;
+}
+
+.cartSummary {
+  width: 30%;
 }
 
 .cartItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 0.7rem;
+}
+
+.cartItem:not(:last-child) {
+  border-bottom: 1px solid #3aafa9;
 }
 
 .itemImg img[alt="Winter body"] {
@@ -57,5 +71,22 @@
   height: 100px;
   object-fit: cover;
   object-position: center;
-  border-radius: 3px;
+  border-radius: 4px;
+}
+
+.cartCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 3rem;
+  width: 100%;
+  padding: 0 2rem;
+  max-width: 1170px;
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 1300px) {
+  .cartCenter {
+    padding: 0;
+  }
 }

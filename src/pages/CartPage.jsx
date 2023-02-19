@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import Layout from "../Layout/Layout";
-import { useCart } from "../Providers/CartProvider";
+import { useCart, useCartActions } from "../Providers/CartProvider";
 import "./cartPage.css";
 
 const CartPage = () => {
   const { cart } = useCart();
+  const dispatch = useCartActions();
+
+  // Hasdlers
+  const incrementHandler = (cartItem) => {
+    dispatch({ type: "ADD_TO_CART", payload: cartItem });
+  };
 
   // Conditional rendering
   if (!cart.length)
@@ -37,9 +43,9 @@ const CartPage = () => {
                     <div>{item.price * item.quantity}$</div>
                   </div>
                   <div className="cartButtonSection">
-                    <button>Add</button>
-                    <button>{item.quantity}</button>
-                    <button>Remove</button>
+                    <button>-</button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => incrementHandler(item)}>+</button>
                   </div>
                 </div>
               );

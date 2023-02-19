@@ -12,6 +12,10 @@ const CartPage = () => {
     dispatch({ type: "ADD_TO_CART", payload: cartItem });
   };
 
+  const decrementHandler = (cartItem) => {
+    dispatch({ type: "DECREMENT_PRODUCT", payload: cartItem });
+  };
+
   // Conditional rendering
   if (!cart.length)
     return (
@@ -43,7 +47,7 @@ const CartPage = () => {
                     <div>{item.price * item.quantity}$</div>
                   </div>
                   <div className="cartButtonSection">
-                    <button>-</button>
+                    <button onClick={() => decrementHandler(item)}>-</button>
                     <span>{item.quantity}</span>
                     <button onClick={() => incrementHandler(item)}>+</button>
                   </div>

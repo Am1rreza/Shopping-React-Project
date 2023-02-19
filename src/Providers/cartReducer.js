@@ -6,7 +6,7 @@ const cartReducer = (state, action) => {
       const index = updatedCart.findIndex(
         (item) => item.id === action.payload.id
       );
-      
+
       if (index < 0) {
         updatedCart.push({ ...action.payload, quantity: 1 });
       } else {
@@ -15,8 +15,13 @@ const cartReducer = (state, action) => {
         updatedCart[index] = item;
       }
 
-      return { ...state, cart: updatedCart };
+      return {
+        ...state,
+        cart: updatedCart,
+        total: state.total + action.payload.price,
+      };
     }
+
     case "DECREMENT_PRODUCT": {
       const updatedCart = [...state.cart];
 
@@ -31,12 +36,20 @@ const cartReducer = (state, action) => {
           (product) => product.id !== item.id
         );
 
-        return { ...state, cart: filteredProducts };
+        return {
+          ...state,
+          cart: filteredProducts,
+          total: state.total - action.payload.price,
+        };
       } else {
         item.quantity--;
         updatedCart[index] = item;
 
-        return { ...state, cart: updatedCart };
+        return {
+          ...state,
+          cart: updatedCart,
+          total: state.total - action.payload.price,
+        };
       }
     }
     default:

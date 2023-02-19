@@ -4,7 +4,7 @@ import { useCart, useCartActions } from "../Providers/CartProvider";
 import "./cartPage.css";
 
 const CartPage = () => {
-  const { cart } = useCart();
+  const { cart, total } = useCart();
   const dispatch = useCartActions();
 
   // Hasdlers
@@ -55,7 +55,10 @@ const CartPage = () => {
               );
             })}
           </section>
-          <section className="cartSummary">cart summary</section>
+          <section className="cartSummary">
+            <h3>Cart Summary</h3>
+            <div>{total}$</div>
+          </section>
         </div>
       </main>
     </Layout>

@@ -30,6 +30,7 @@
 }
 
 .product {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,6 +38,22 @@
   background-color: #d3efee;
   color: #17252a;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.discountBadge {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: #def2f1;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .productDescription {

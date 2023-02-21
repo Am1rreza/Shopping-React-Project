@@ -44,7 +44,7 @@ const CartPage = () => {
                       <img src={item.image} alt={item.name} />
                     </div>
                     <div>{item.name}</div>
-                    <div>{item.price * item.quantity}$</div>
+                    <div>{item.offPrice * item.quantity}$</div>
                   </div>
                   <div className="cartButtonSection">
                     <button onClick={() => decrementHandler(item)}>-</button>

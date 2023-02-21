@@ -14,7 +14,7 @@ const addToCart = (state, action) => {
   return {
     ...state,
     cart: updatedCart,
-    total: state.total + action.payload.price,
+    total: state.total + action.payload.offPrice,
   };
 };
 
@@ -33,7 +33,7 @@ const decrementProduct = (state, action) => {
     return {
       ...state,
       cart: filteredProducts,
-      total: state.total - action.payload.price,
+      total: state.total - action.payload.offPrice,
     };
   } else {
     item.quantity--;
@@ -42,7 +42,7 @@ const decrementProduct = (state, action) => {
     return {
       ...state,
       cart: updatedCart,
-      total: state.total - action.payload.price,
+      total: state.total - action.payload.offPrice,
     };
   }
 };

@@ -21,6 +21,9 @@ const HomePage = () => {
           {data.products.map((product) => {
             return (
               <section className="product" key={product.id}>
+                {product.discount !== 0 && (
+                  <span className="discountBadge">{product.discount}%</span>
+                )}
                 <div className="productImg">
                   <img src={product.image} alt={product.name} />
                 </div>

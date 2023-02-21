@@ -1,8 +1,10 @@
 import Layout from "../Layout/Layout";
 import * as data from "../data";
-import { useCartActions } from "../Providers/CartProvider";
+import { useCart, useCartActions } from "../Providers/CartProvider";
+import checkInCart from "../utils/checkInCart";
 
 const HomePage = () => {
+  const { cart } = useCart();
   const dispatch = useCartActions();
 
   // Handlers
@@ -26,10 +28,11 @@ const HomePage = () => {
                     <p>{product.price}$</p>
                   </div>
                   <button
-                    className="btn primaryBtn"
+                    disabled={checkInCart(cart, product)}
+                    className="btn primaryBtn addToCartBtn"
                     onClick={() => addProductHandler(product)}
                   >
-                    Add to Cart
+                    {checkInCart(cart, product) ? "In Cart" : "Add to Cart"}
                   </button>
                 </div>
               </section>

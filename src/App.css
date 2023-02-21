@@ -71,3 +71,12 @@
   background-color: #b0e9e6;
   color: #17252a;
 }
+
+.addToCartBtn[disabled] {
+  cursor: initial;
+  background-color: #ccc;
+}
+
+.addToCartBtn {
+  font-weight: 600;
+}

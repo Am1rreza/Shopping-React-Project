@@ -2,6 +2,7 @@ import Layout from "../Layout/Layout";
 import * as data from "../data";
 import { useCart, useCartActions } from "../Providers/CartProvider";
 import checkInCart from "../utils/checkInCart";
+import { toast } from "react-toastify";
 
 const HomePage = () => {
   const { cart } = useCart();
@@ -9,6 +10,7 @@ const HomePage = () => {
 
   // Handlers
   const addProductHandler = (product) => {
+    toast.success(`${product.name} Added to Cart`);
     dispatch({ type: "ADD_TO_CART", payload: product });
   };
 

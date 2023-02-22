@@ -43,7 +43,7 @@
 
 .cartSummary {
   width: 30%;
-  height: 12rem;
+  height: 13rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -57,7 +57,7 @@
   align-items: center;
 }
 
-.summaryItem:last-child {
+.summaryItem:nth-child(4) {
   font-weight: 600;
 }
 
@@ -162,5 +162,13 @@
   .cartItemList {
     width: 100%;
     flex: auto;
+  }
+
+  .btnGroup button {
+    width: 33.33%;
+  }
+
+  .btnGroup {
+    width: 10rem;
   }
 }

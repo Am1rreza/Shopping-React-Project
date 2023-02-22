@@ -46,9 +46,9 @@ const CartPage = () => {
                     <div>{item.name}</div>
                     <div>{item.offPrice * item.quantity}$</div>
                   </div>
-                  <div className="cartButtonSection">
+                  <div className="btnGroup">
                     <button onClick={() => decrementHandler(item)}>-</button>
-                    <span>{item.quantity}</span>
+                    <button>{item.quantity}</button>
                     <button onClick={() => incrementHandler(item)}>+</button>
                   </div>
                 </div>

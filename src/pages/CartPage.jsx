@@ -72,9 +72,9 @@ const CartSummary = ({ total, cart }) => {
 
   return (
     <section className="cartSummary">
-      <h3>Cart Summary</h3>
+      <h3 style={{ marginBottom: "0.7rem" }}>Cart Summary</h3>
       <div className="summaryItem">
-        <p>Products Prices</p>
+        <p>Prices</p>
         <p>{originalTotalPrice}$</p>
       </div>
       <div className="summaryItem">
@@ -85,6 +85,9 @@ const CartSummary = ({ total, cart }) => {
         <p>Total Price</p>
         <p>{total}$</p>
       </div>
+      <Link to={"/checkout"}>
+        <button className="btn primaryBtn">Go to Checkout</button>
+      </Link>
     </section>
   );
 };

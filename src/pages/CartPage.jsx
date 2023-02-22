@@ -55,7 +55,7 @@ const CartPage = () => {
               );
             })}
           </section>
-          <CartSummary total={total} />
+          <CartSummary cart={cart} total={total} />
         </div>
       </main>
     </Layout>
@@ -65,21 +65,25 @@ const CartPage = () => {
 export default CartPage;
 
 // Cart summary component
-const CartSummary = ({ total }) => {
+const CartSummary = ({ total, cart }) => {
+  const originalTotalPrice = cart.length
+    ? cart.reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
+    : 0;
+
   return (
     <section className="cartSummary">
       <h3>Cart Summary</h3>
       <div className="summaryItem">
         <p>Products Prices</p>
-        <p>120$</p>
+        <p>{originalTotalPrice}$</p>
       </div>
       <div className="summaryItem">
         <p>Discount</p>
-        <p>20$</p>
+        <p>{originalTotalPrice - total}$</p>
       </div>
       <div className="summaryItem">
         <p>Total Price</p>
-        <p>100$</p>
+        <p>{total}$</p>
       </div>
     </section>
   );

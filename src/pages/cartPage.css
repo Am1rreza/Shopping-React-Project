@@ -54,6 +54,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+  align-self: flex-start;
 }
 
 .summaryItem {

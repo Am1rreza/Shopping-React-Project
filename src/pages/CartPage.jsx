@@ -55,10 +55,7 @@ const CartPage = () => {
               );
             })}
           </section>
-          <section className="cartSummary">
-            <h3>Cart Summary</h3>
-            <div>{total}$</div>
-          </section>
+          <CartSummary total={total} />
         </div>
       </main>
     </Layout>
@@ -66,3 +63,24 @@ const CartPage = () => {
 };
 
 export default CartPage;
+
+// Cart summary component
+const CartSummary = ({ total }) => {
+  return (
+    <section className="cartSummary">
+      <h3>Cart Summary</h3>
+      <div className="summaryItem">
+        <p>Products Prices</p>
+        <p>120$</p>
+      </div>
+      <div className="summaryItem">
+        <p>Discount</p>
+        <p>20$</p>
+      </div>
+      <div className="summaryItem">
+        <p>Total Price</p>
+        <p>100$</p>
+      </div>
+    </section>
+  );
+};

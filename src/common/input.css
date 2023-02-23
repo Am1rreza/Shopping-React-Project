@@ -1,0 +1,73 @@
+label {
+  display: flex;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+  width: 400px;
+  padding: 6px 12px;
+  display: block;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: 1px solid #3aafa9;
+}
+
+.formControl {
+  margin-bottom: 1rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 5px 15px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+form button {
+  width: 100%;
+}
+
+.btnBox {
+  width: 400px;
+  margin-top: 0.7rem;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+@media screen and (max-width: 640px) {
+  .formControl {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+  }
+
+  .btnBox {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}

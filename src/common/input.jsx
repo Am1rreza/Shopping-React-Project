@@ -1,3 +1,5 @@
+import "./input.css";
+
 const Input = ({ label, name, formik, type = "text" }) => {
   return (
     <div className="formControl">

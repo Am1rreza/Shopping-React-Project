@@ -52,7 +52,7 @@ const SignupForm = () => {
 
         <Input formik={formik} name="email" label="Email" />
 
-        <Input formik={formik} name="number" label="Phone Number" type="tel" />
+        <Input formik={formik} name="number" label="Phone Number" />
 
         <Input
           formik={formik}

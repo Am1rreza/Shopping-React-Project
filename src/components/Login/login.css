@@ -1,4 +1,4 @@
-form {
+.loginContainer {
   width: 100%;
   min-height: 85vh;
   display: flex;
@@ -8,15 +8,8 @@ form {
   padding: 1.5rem 0;
 }
 
-form a {
-  display: inline-block;
-  text-decoration: none;
-  color: #333;
-  margin-top: 1rem;
-}
-
 @media screen and (max-width: 640px) {
-  form {
-    min-height: initial;
+  .loginContainer {
+    min-height: 60vh;
   }
 }

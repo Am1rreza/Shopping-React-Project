@@ -41,13 +41,15 @@ const LoginForm = () => {
         />
 
         <div className="btnBox">
-          <button
-            className="btn primaryBtn"
-            type="submit"
-            disabled={!formik.isValid}
-          >
-            Login
-          </button>
+          <Link to={"/"} className="submitBtn">
+            <button
+              className="btn primaryBtn"
+              type="submit"
+              disabled={!formik.isValid}
+            >
+              Login
+            </button>
+          </Link>
           <Link to={"/signup"}>
             <p>Not Signup yet?</p>
           </Link>

@@ -70,13 +70,15 @@ const SignupForm = () => {
         />
 
         <div className="btnBox">
-          <button
-            className="btn primaryBtn"
-            type="submit"
-            disabled={!formik.isValid}
-          >
-            Sign Up
-          </button>
+          <Link to={"/login"} className="submitBtn">
+            <button
+              className="btn primaryBtn"
+              type="submit"
+              disabled={!formik.isValid}
+            >
+              Sign Up
+            </button>
+          </Link>
           <Link to={"/login"}>
             <p>Already Login?</p>
           </Link>

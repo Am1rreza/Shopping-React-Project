@@ -3,6 +3,10 @@
   height: 4.5rem;
   background-color: #def2f1;
   color: #2b7a78;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .mainNavigation h3 {

@@ -85,7 +85,7 @@ const CartSummary = ({ total, cart }) => {
         <p>Total Price</p>
         <p>{total}$</p>
       </div>
-      <Link to={"/signup"}>
+      <Link to={"/login"}>
         <button className="btn primaryBtn">Go to Checkout</button>
       </Link>
     </section>

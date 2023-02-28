@@ -21,6 +21,11 @@ const Navigation = () => {
               <span className="badge">{cart.length}</span>
             </NavLink>
           </li>
+          <li>
+            <NavLink activeClassName="activeLink" to={"/login"}>
+              Login
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

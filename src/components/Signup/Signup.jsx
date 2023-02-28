@@ -2,11 +2,8 @@ import "./signup.css";
 import Input from "../../common/input";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
-
-const onSubmit = (values) => {
-  console.log(values);
-};
+import { Link, withRouter } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const initialValues = {
   name: "",
@@ -38,7 +35,12 @@ const validationSchema = Yup.object({
     .oneOf([Yup.ref("password"), null], "Passwords must match"),
 });
 
-const SignupForm = () => {
+const SignupForm = ({ history }) => {
+  const onSubmit = (values) => {
+    toast.success("Sign Up Successfully");
+    history.push("/login");
+  };
+
   const formik = useFormik({
     initialValues,
     onSubmit,
@@ -70,15 +72,13 @@ const SignupForm = () => {
         />
 
         <div className="btnBox">
-          <Link to={"/login"} className="submitBtn">
-            <button
-              className="btn primaryBtn"
-              type="submit"
-              disabled={!formik.isValid}
-            >
-              Sign Up
-            </button>
-          </Link>
+          <button
+            className="btn primaryBtn"
+            type="submit"
+            disabled={!formik.isValid}
+          >
+            Sign Up
+          </button>
           <Link to={"/login"}>
             <p>Already Login?</p>
           </Link>
@@ -88,4 +88,4 @@ const SignupForm = () => {
   );
 };
 
-export default SignupForm;
+export default withRouter(SignupForm);

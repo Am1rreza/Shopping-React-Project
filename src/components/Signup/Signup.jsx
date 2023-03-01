@@ -55,7 +55,12 @@ const SignupForm = ({ history }) => {
 
         <Input formik={formik} name="email" label="Email" />
 
-        <Input formik={formik} name="number" label="Phone Number" />
+        <Input
+          formik={formik}
+          type={"tel"}
+          name="number"
+          label="Phone Number"
+        />
 
         <Input
           formik={formik}

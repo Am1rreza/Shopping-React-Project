@@ -135,6 +135,7 @@
 .btnGroup :nth-child(2) {
   border-left: 0;
   border-right: 0;
+  border-radius: 0;
 }
 
 @media screen and (min-width: 1300px) {
